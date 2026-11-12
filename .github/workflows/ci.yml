@@ -40,13 +40,15 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
         with:
-          go-version: '1.26.4'
+          go-version: '1.26.11'
       - name: Audit public source
         run: python scripts/audit_public.py
       - name: Native file, lock, migration and CLI tests
         run: go test -timeout 5m ./pkg/firetoiris ./cmd/firetoiris
       - name: Static checks
         run: go vet ./pkg/firetoiris ./cmd/firetoiris
+      - name: Audit reachable Go vulnerabilities
+        run: go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
       - name: Package verified executable
         run: python scripts/package.py --target ${{ matrix.target }} --smoke
       - name: Upload build artifact

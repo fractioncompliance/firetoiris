@@ -28,12 +28,13 @@ Choose the ZIP for your OS and processor in [Releases](https://github.com/fracti
 | Linux Intel/AMD x64 | linux-amd64 |
 | Linux ARM64 | linux-arm64 |
 
-No Go installation is needed for a download. Preview binaries are unsigned. Use the normal operating-system checks; do not disable security software. A developer can build with Go 1.26 or newer:
+No Go installation is needed for a download. Preview binaries are unsigned. Use the normal operating-system checks; do not disable security software. A developer can build with Go 1.26.11 or a newer patched release:
 
 ```sh
 go build -trimpath -o FIREtoIRIS ./cmd/firetoiris
 go test -race ./...
 go vet ./...
+go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
 ```
 
 ## The guided bridge

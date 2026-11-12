@@ -8,5 +8,6 @@
 - TaxComposer as the default API connector, with an origin override and forkable connection code.
 - Private recovery journals, stable request keys and separate approval/submission controls.
 - Windows, macOS and Linux downloads on x64 and ARM64.
+- Go 1.26.11 minimum runtime, recorded in package manifests, with reachable-vulnerability checks in CI.
 
 The local browser interface prepares drafts. There is no direct IRS transmitter or enabled production filing mode in this preview.

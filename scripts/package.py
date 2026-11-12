@@ -43,6 +43,7 @@ def package(root, output, go, target, smoke):
                 raise RuntimeError('Native executable smoke test failed')
         manifest = {
             'name': 'FIREtoIRIS', 'platform': target, 'goos': goos, 'goarch': goarch,
+            'go_version': subprocess.check_output([go, 'env', 'GOVERSION'], cwd=root, text=True).strip(),
             'source_commit': commit, 'source_dirty': dirty, 'native_smoke_tested': smoke,
             'files': {p.relative_to(folder).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(folder.rglob('*')) if p.is_file()},
         }
@@ -75,7 +76,7 @@ def main():
     parser.add_argument('--go', default=shutil.which('go'))
     args = parser.parse_args()
     if not args.go:
-        parser.error('Go 1.26+ is required; supply --go or add Go to PATH.')
+        parser.error('Go 1.26.11+ is required; supply --go or add Go to PATH.')
     root = Path(__file__).resolve().parents[1]
     output = args.output_dir.resolve()
     output.mkdir(parents=True, exist_ok=True)
