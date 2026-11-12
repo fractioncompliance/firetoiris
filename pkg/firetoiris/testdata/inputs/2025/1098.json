@@ -1,0 +1,50 @@
+{
+  "tax_year": 2025,
+  "form": "1098",
+  "header": {
+    "CFSFElectionInd": "0",
+    "ContactPersonInformationGrp": {
+      "ContactEmailAddressTxt": "synthetic@example.invalid",
+      "ContactPersonNm": "SYNTHETIC CONTACT",
+      "ContactPhoneNum": "2065550100"
+    },
+    "IssuerDetail": {
+      "BusinessName": {
+        "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+      },
+      "ForeignEntityInd": "0",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "PhoneNum": "2065550100",
+      "TIN": "000123456",
+      "TINSubmittedTypeCd": "BUSINESS_TIN"
+    }
+  },
+  "records": [
+    {
+      "PropAddrSameBorrowerAddrInd": "1",
+      "RecipientAccountNum": "SYNTHETIC-1",
+      "RecipientDetail": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        },
+        "TIN": "000123456",
+        "TINSubmittedTypeCd": "BUSINESS_TIN"
+      }
+    }
+  ]
+}

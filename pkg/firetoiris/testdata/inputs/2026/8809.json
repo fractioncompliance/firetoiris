@@ -1,0 +1,43 @@
+{
+  "tax_year": 2026,
+  "form": "8809",
+  "header": {
+    "IssuerDetail": {
+      "BusinessName": {
+        "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+      },
+      "ForeignEntityInd": "0",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "PhoneNum": "2065550100",
+      "TIN": "000123456",
+      "TINSubmittedTypeCd": "BUSINESS_TIN"
+    }
+  },
+  "records": [
+    {
+      "AdditionalExtensionInd": "0",
+      "ApplicableFormTypeCd": [
+        "1099"
+      ],
+      "ContactPersonInformationGrp": {
+        "ContactEmailAddressTxt": "synthetic@example.invalid",
+        "ContactPersonNm": "SYNTHETIC CONTACT",
+        "ContactPhoneNum": "2065550100"
+      },
+      "FederallyDeclaredDisasterInd": "0",
+      "FirstYrEstablishmentInd": "0",
+      "IRElectronicSubmissionInd": "1",
+      "IRPaperSubmissionInd": "0",
+      "MultipleFEMADisastersInd": "0",
+      "PayeeStmtNotRcvdInd": "0",
+      "RspnsAbsenceInd": "0"
+    }
+  ]
+}

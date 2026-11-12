@@ -1,0 +1,1405 @@
+{
+  "tax_year": 2026,
+  "form": "15397",
+  "submission_group": 2,
+  "header": {
+    "id": "header",
+    "kind": "element",
+    "name": "IRSubmission2Header",
+    "key": "IRSubmission2Header",
+    "label": "IRSubmission2Header",
+    "min_occurs": 1,
+    "max_occurs": 1,
+    "type": "IRSubmission2HeaderType",
+    "children": [
+      {
+        "id": "header/IRSubmission2HeaderType/sequence[1]",
+        "kind": "sequence",
+        "label": "",
+        "min_occurs": 1,
+        "max_occurs": 1,
+        "children": [
+          {
+            "id": "header/IRSubmission2HeaderType/sequence[1]/SubmissionId",
+            "kind": "element",
+            "name": "SubmissionId",
+            "key": "SubmissionId",
+            "label": "SubmissionId",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "SubmissionIdType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "maxLength",
+                "value": "8"
+              },
+              {
+                "kind": "pattern",
+                "value": "[1-9][0-9]*"
+              }
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission2HeaderType/sequence[1]/TaxYr",
+            "kind": "element",
+            "name": "TaxYr",
+            "key": "TaxYr",
+            "label": "TaxYr",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "YearType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "[1-9][0-9]{3}"
+              }
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission2HeaderType/sequence[1]/FormTypeCd",
+            "kind": "element",
+            "name": "FormTypeCd",
+            "key": "FormTypeCd",
+            "label": "FormTypeCd",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "base": "string",
+            "enums": [
+              "8809",
+              "15397"
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail",
+            "kind": "element",
+            "name": "IssuerDetail",
+            "key": "IssuerDetail",
+            "label": "IssuerDetail",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "IssuerDetailType",
+            "children": [
+              {
+                "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/ForeignEntityInd",
+                    "kind": "element",
+                    "name": "ForeignEntityInd",
+                    "key": "ForeignEntityInd",
+                    "label": "Foreign Entity Indicator",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DigitBooleanType",
+                    "base": "string",
+                    "enums": [
+                      "0",
+                      "1"
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/TIN",
+                    "kind": "element",
+                    "name": "TIN",
+                    "key": "TIN",
+                    "label": "TIN (Taxpayer Identification Number)",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "TINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{9}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/TINSubmittedTypeCd",
+                    "kind": "element",
+                    "name": "TINSubmittedTypeCd",
+                    "key": "TINSubmittedTypeCd",
+                    "label": "A code used to identify the TIN submitted type code",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "TINSubmittedTypeCdType",
+                    "base": "string",
+                    "enums": [
+                      "INDIVIDUAL_TIN",
+                      "BUSINESS_TIN",
+                      "UNKNOWN"
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]",
+                    "kind": "choice",
+                    "label": "",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "children": [
+                      {
+                        "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]/PersonNameControlTxt",
+                            "kind": "element",
+                            "name": "PersonNameControlTxt",
+                            "key": "PersonNameControlTxt",
+                            "label": "PersonNameControlTxt",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "PersonNameControlType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "pattern",
+                                "value": "[A-Z][A-Z\\- ]{0,3}"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]/PersonName",
+                            "kind": "element",
+                            "name": "PersonName",
+                            "key": "PersonName",
+                            "label": "PersonName",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "OtherCompletePersonNameType",
+                            "children": [
+                              {
+                                "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/PersonFirstNm",
+                                    "kind": "element",
+                                    "name": "PersonFirstNm",
+                                    "key": "PersonFirstNm",
+                                    "label": "Person First Name",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "PersonFirstNameType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "20"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/PersonMiddleNm",
+                                    "kind": "element",
+                                    "name": "PersonMiddleNm",
+                                    "key": "PersonMiddleNm",
+                                    "label": "Person Middle Name",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "PersonMiddleNameType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "20"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/PersonLastNm",
+                                    "kind": "element",
+                                    "name": "PersonLastNm",
+                                    "key": "PersonLastNm",
+                                    "label": "Person Last Name",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "PersonLastNameType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "20"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/SuffixNm",
+                                    "kind": "element",
+                                    "name": "SuffixNm",
+                                    "key": "SuffixNm",
+                                    "label": "Suffix Name",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "SuffixNameType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "20"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      },
+                      {
+                        "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[1]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[1]/BusinessNameControlTxt",
+                            "kind": "element",
+                            "name": "BusinessNameControlTxt",
+                            "key": "BusinessNameControlTxt",
+                            "label": "BusinessNameControlTxt",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "BusinessNameControlType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "pattern",
+                                "value": "([A-Z0-9\\-]|\u0026){1,4}"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[1]/BusinessName",
+                            "kind": "element",
+                            "name": "BusinessName",
+                            "key": "BusinessName",
+                            "label": "BusinessName",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "BusinessNameType",
+                            "children": [
+                              {
+                                "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[1]/BusinessName/BusinessNameType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[1]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine1Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine1Txt",
+                                    "key": "BusinessNameLine1Txt",
+                                    "label": "BusinessNameLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine1Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/choice[3]/sequence[1]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine2Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine2Txt",
+                                    "key": "BusinessNameLine2Txt",
+                                    "label": "BusinessNameLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine2Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#/%\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#/%\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp",
+                    "kind": "element",
+                    "name": "MailingAddressGrp",
+                    "key": "MailingAddressGrp",
+                    "label": "Mailing Address Group",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "AddressGrpType",
+                    "children": [
+                      {
+                        "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]",
+                        "kind": "choice",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress",
+                            "kind": "element",
+                            "name": "USAddress",
+                            "key": "USAddress",
+                            "label": "Type for a U.S. Address",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "USAddressType",
+                            "children": [
+                              {
+                                "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/AddressLine1Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine1Txt",
+                                    "key": "AddressLine1Txt",
+                                    "label": "AddressLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/AddressLine2Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine2Txt",
+                                    "key": "AddressLine2Txt",
+                                    "label": "AddressLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/CityNm",
+                                    "kind": "element",
+                                    "name": "CityNm",
+                                    "key": "CityNm",
+                                    "label": "CityNm",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "CityType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "40"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z] ?)*[A-Za-z]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/StateAbbreviationCd",
+                                    "kind": "element",
+                                    "name": "StateAbbreviationCd",
+                                    "key": "StateAbbreviationCd",
+                                    "label": "StateAbbreviationCd",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StateType",
+                                    "base": "string",
+                                    "enums": [
+                                      "AL",
+                                      "AK",
+                                      "AS",
+                                      "AZ",
+                                      "AR",
+                                      "CA",
+                                      "CO",
+                                      "MP",
+                                      "CT",
+                                      "DE",
+                                      "DC",
+                                      "FM",
+                                      "FL",
+                                      "GA",
+                                      "GU",
+                                      "HI",
+                                      "ID",
+                                      "IL",
+                                      "IN",
+                                      "IA",
+                                      "KS",
+                                      "KY",
+                                      "LA",
+                                      "ME",
+                                      "MH",
+                                      "MD",
+                                      "MA",
+                                      "MI",
+                                      "MN",
+                                      "MS",
+                                      "MO",
+                                      "MT",
+                                      "NE",
+                                      "NV",
+                                      "NH",
+                                      "NJ",
+                                      "NM",
+                                      "NY",
+                                      "NC",
+                                      "ND",
+                                      "OH",
+                                      "OK",
+                                      "OR",
+                                      "PW",
+                                      "PA",
+                                      "PR",
+                                      "RI",
+                                      "SC",
+                                      "SD",
+                                      "TN",
+                                      "TX",
+                                      "VI",
+                                      "UT",
+                                      "VT",
+                                      "VA",
+                                      "WA",
+                                      "WV",
+                                      "WI",
+                                      "WY",
+                                      "AA",
+                                      "AE",
+                                      "AP"
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/ZIPCd",
+                                    "kind": "element",
+                                    "name": "ZIPCd",
+                                    "key": "ZIPCd",
+                                    "label": "ZIPCd",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "ZIPCodeType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[0-9]{5}(([0-9]{4})|([0-9]{7}))?"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress",
+                            "kind": "element",
+                            "name": "ForeignAddress",
+                            "key": "ForeignAddress",
+                            "label": "Type for a Foreign Address",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "ForeignAddressType",
+                            "children": [
+                              {
+                                "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/AddressLine1Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine1Txt",
+                                    "key": "AddressLine1Txt",
+                                    "label": "AddressLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/AddressLine2Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine2Txt",
+                                    "key": "AddressLine2Txt",
+                                    "label": "AddressLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/CityNm",
+                                    "kind": "element",
+                                    "name": "CityNm",
+                                    "key": "CityNm",
+                                    "label": "City",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "50"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z] ?)*[A-Za-z]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/ProvinceOrStateNm",
+                                    "kind": "element",
+                                    "name": "ProvinceOrStateNm",
+                                    "key": "ProvinceOrStateNm",
+                                    "label": "Province or state",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                                      },
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "17"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/CountryCd",
+                                    "kind": "element",
+                                    "name": "CountryCd",
+                                    "key": "CountryCd",
+                                    "label": "Country",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "CountryType",
+                                    "base": "string",
+                                    "enums": [
+                                      "AF",
+                                      "AX",
+                                      "AL",
+                                      "AG",
+                                      "AQ",
+                                      "AN",
+                                      "AO",
+                                      "AV",
+                                      "AY",
+                                      "AC",
+                                      "AR",
+                                      "AM",
+                                      "AA",
+                                      "AT",
+                                      "AS",
+                                      "AU",
+                                      "AJ",
+                                      "BF",
+                                      "BA",
+                                      "FQ",
+                                      "BG",
+                                      "BB",
+                                      "BO",
+                                      "BE",
+                                      "BH",
+                                      "BN",
+                                      "BD",
+                                      "BT",
+                                      "BL",
+                                      "BK",
+                                      "BC",
+                                      "BV",
+                                      "BR",
+                                      "IO",
+                                      "VI",
+                                      "BX",
+                                      "BU",
+                                      "UV",
+                                      "BM",
+                                      "BY",
+                                      "CB",
+                                      "CM",
+                                      "CA",
+                                      "CV",
+                                      "CJ",
+                                      "CT",
+                                      "CD",
+                                      "CI",
+                                      "CH",
+                                      "KT",
+                                      "IP",
+                                      "CK",
+                                      "CO",
+                                      "CN",
+                                      "CF",
+                                      "CG",
+                                      "CW",
+                                      "CR",
+                                      "CS",
+                                      "IV",
+                                      "HR",
+                                      "CU",
+                                      "UC",
+                                      "CY",
+                                      "EZ",
+                                      "DA",
+                                      "DX",
+                                      "DJ",
+                                      "DO",
+                                      "DR",
+                                      "TT",
+                                      "EC",
+                                      "EG",
+                                      "ES",
+                                      "EK",
+                                      "ER",
+                                      "EN",
+                                      "ET",
+                                      "FK",
+                                      "FO",
+                                      "FM",
+                                      "FJ",
+                                      "FI",
+                                      "FR",
+                                      "FP",
+                                      "FS",
+                                      "GB",
+                                      "GA",
+                                      "GG",
+                                      "GM",
+                                      "GH",
+                                      "GI",
+                                      "GR",
+                                      "GL",
+                                      "GJ",
+                                      "GQ",
+                                      "GT",
+                                      "GK",
+                                      "GV",
+                                      "PU",
+                                      "GY",
+                                      "HA",
+                                      "HM",
+                                      "VT",
+                                      "HO",
+                                      "HK",
+                                      "HQ",
+                                      "HU",
+                                      "IC",
+                                      "IN",
+                                      "ID",
+                                      "IR",
+                                      "IZ",
+                                      "EI",
+                                      "IS",
+                                      "IT",
+                                      "JM",
+                                      "JN",
+                                      "JA",
+                                      "DQ",
+                                      "JE",
+                                      "JQ",
+                                      "JO",
+                                      "KZ",
+                                      "KE",
+                                      "KQ",
+                                      "KR",
+                                      "KN",
+                                      "KS",
+                                      "KV",
+                                      "KU",
+                                      "KG",
+                                      "LA",
+                                      "LG",
+                                      "LE",
+                                      "LT",
+                                      "LI",
+                                      "LY",
+                                      "LS",
+                                      "LH",
+                                      "LU",
+                                      "MC",
+                                      "MK",
+                                      "MA",
+                                      "MI",
+                                      "MY",
+                                      "MV",
+                                      "ML",
+                                      "MT",
+                                      "IM",
+                                      "RM",
+                                      "MR",
+                                      "MP",
+                                      "MX",
+                                      "MQ",
+                                      "MD",
+                                      "MN",
+                                      "MG",
+                                      "MJ",
+                                      "MH",
+                                      "MO",
+                                      "MZ",
+                                      "WA",
+                                      "NR",
+                                      "BQ",
+                                      "NP",
+                                      "NL",
+                                      "NC",
+                                      "NZ",
+                                      "NU",
+                                      "NG",
+                                      "NI",
+                                      "NE",
+                                      "NF",
+                                      "CQ",
+                                      "NO",
+                                      "MU",
+                                      "OC",
+                                      "PK",
+                                      "PS",
+                                      "LQ",
+                                      "PM",
+                                      "PP",
+                                      "PF",
+                                      "PA",
+                                      "PE",
+                                      "RP",
+                                      "PC",
+                                      "PL",
+                                      "PO",
+                                      "RQ",
+                                      "QA",
+                                      "RO",
+                                      "RS",
+                                      "RW",
+                                      "TB",
+                                      "RN",
+                                      "WS",
+                                      "SM",
+                                      "TP",
+                                      "SA",
+                                      "SG",
+                                      "RI",
+                                      "SE",
+                                      "SL",
+                                      "SN",
+                                      "NN",
+                                      "LO",
+                                      "SI",
+                                      "BP",
+                                      "SO",
+                                      "SF",
+                                      "SX",
+                                      "OD",
+                                      "SP",
+                                      "PG",
+                                      "CE",
+                                      "SH",
+                                      "SC",
+                                      "ST",
+                                      "SB",
+                                      "VC",
+                                      "SU",
+                                      "NS",
+                                      "SV",
+                                      "WZ",
+                                      "SW",
+                                      "SZ",
+                                      "SY",
+                                      "TW",
+                                      "TI",
+                                      "TZ",
+                                      "TH",
+                                      "TO",
+                                      "TL",
+                                      "TN",
+                                      "TD",
+                                      "TS",
+                                      "TU",
+                                      "TX",
+                                      "TK",
+                                      "TV",
+                                      "UG",
+                                      "UP",
+                                      "AE",
+                                      "UK",
+                                      "UY",
+                                      "UZ",
+                                      "NH",
+                                      "VE",
+                                      "VM",
+                                      "VQ",
+                                      "WQ",
+                                      "WF",
+                                      "WI",
+                                      "YM",
+                                      "ZA",
+                                      "ZI"
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  },
+                                  {
+                                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/ForeignPostalCd",
+                                    "kind": "element",
+                                    "name": "ForeignPostalCd",
+                                    "key": "ForeignPostalCd",
+                                    "label": "Postal code",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                                      },
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "16"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission2HeaderType/sequence[1]/IssuerDetail/IssuerDetailType/sequence[1]/PhoneNum",
+                    "kind": "element",
+                    "name": "PhoneNum",
+                    "key": "PhoneNum",
+                    "label": "Phone Number",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "ContactPhoneNumberType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "minLength",
+                        "value": "10"
+                      },
+                      {
+                        "kind": "maxLength",
+                        "value": "30"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([0-9,])*"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          }
+        ],
+        "automatic": false,
+        "sensitive": false
+      }
+    ],
+    "automatic": false,
+    "sensitive": false
+  },
+  "record": {
+    "id": "record",
+    "kind": "element",
+    "name": "Form15397Detail",
+    "key": "Form15397Detail",
+    "label": "Form15397Detail",
+    "min_occurs": 1,
+    "max_occurs": 1,
+    "type": "Form15397DetailType",
+    "children": [
+      {
+        "id": "record/Form15397DetailType/sequence[1]",
+        "kind": "sequence",
+        "label": "",
+        "min_occurs": 1,
+        "max_occurs": 1,
+        "children": [
+          {
+            "id": "record/Form15397DetailType/sequence[1]/ContactPersonInformationGrp",
+            "kind": "element",
+            "name": "ContactPersonInformationGrp",
+            "key": "ContactPersonInformationGrp",
+            "label": "ContactPersonInformationGrp",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "ContactPersonInformationGrpType",
+            "children": [
+              {
+                "id": "record/Form15397DetailType/sequence[1]/ContactPersonInformationGrp/ContactPersonInformationGrpType/sequence[1]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/ContactPersonInformationGrp/ContactPersonInformationGrpType/sequence[1]/ContactPersonNm",
+                    "kind": "element",
+                    "name": "ContactPersonNm",
+                    "key": "ContactPersonNm",
+                    "label": "Contact Person Name",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "PersonNameType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "35"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([A-Za-z0-9'\\-] ?)*[A-Za-z0-9'\\-]"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/ContactPersonInformationGrp/ContactPersonInformationGrpType/sequence[1]/ContactPhoneNum",
+                    "kind": "element",
+                    "name": "ContactPhoneNum",
+                    "key": "ContactPhoneNum",
+                    "label": "Contact Phone Number",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "ContactPhoneNumberType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "minLength",
+                        "value": "10"
+                      },
+                      {
+                        "kind": "maxLength",
+                        "value": "30"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([0-9,])*"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/ContactPersonInformationGrp/ContactPersonInformationGrpType/sequence[1]/ContactEmailAddressTxt",
+                    "kind": "element",
+                    "name": "ContactEmailAddressTxt",
+                    "key": "ContactEmailAddressTxt",
+                    "label": "Contact Email Address",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "EmailAddressType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                      },
+                      {
+                        "kind": "maxLength",
+                        "value": "75"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": ".+@.+"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/ContactPersonInformationGrp/ContactPersonInformationGrpType/sequence[1]/ContactFaxNum",
+                    "kind": "element",
+                    "name": "ContactFaxNum",
+                    "key": "ContactFaxNum",
+                    "label": "Contact Fax Number",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "ContactPhoneNumberType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "minLength",
+                        "value": "10"
+                      },
+                      {
+                        "kind": "maxLength",
+                        "value": "30"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([0-9,])*"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form15397DetailType/sequence[1]/ApplicableFormTypeCd",
+            "kind": "element",
+            "name": "ApplicableFormTypeCd",
+            "key": "ApplicableFormTypeCd",
+            "label": "Forms that extensions are being requested for. Note that option 1099 is a group that extends the due date for Forms 3921, 3922, W-2G, and some Forms 1097, 1098, and 1099 (see instructions).",
+            "min_occurs": 1,
+            "max_occurs": 9,
+            "base": "string",
+            "enums": [
+              "1042S",
+              "1099",
+              "5498",
+              "5498QA",
+              "5498ESA",
+              "5498SA",
+              "5498TA",
+              "W2",
+              "1095B/1095C"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form15397DetailType/sequence[1]/ShortDesc",
+            "kind": "element",
+            "name": "ShortDesc",
+            "key": "ShortDesc",
+            "label": "\"Description of need for an extension to furnish recipient(s) copies of information returns\"",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "ShortExplanationType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+              },
+              {
+                "kind": "maxLength",
+                "value": "1000"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form15397DetailType/sequence[1]/JuratSignatureGrp",
+            "kind": "element",
+            "name": "JuratSignatureGrp",
+            "key": "JuratSignatureGrp",
+            "label": "JuratSignatureGrp",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "JuratSignatureGrpType",
+            "children": [
+              {
+                "id": "record/Form15397DetailType/sequence[1]/JuratSignatureGrp/JuratSignatureGrpType/sequence[1]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/JuratSignatureGrp/JuratSignatureGrpType/sequence[1]/SignatureIntentInd",
+                    "kind": "element",
+                    "name": "SignatureIntentInd",
+                    "key": "SignatureIntentInd",
+                    "label": "SignatureIntentInd",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DigitBooleanType",
+                    "base": "string",
+                    "enums": [
+                      "0",
+                      "1"
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/JuratSignatureGrp/JuratSignatureGrpType/sequence[1]/JuratSignaturePIN",
+                    "kind": "element",
+                    "name": "JuratSignaturePIN",
+                    "key": "JuratSignaturePIN",
+                    "label": "JuratSignaturePIN",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "JuratSignaturePINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{5}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/JuratSignatureGrp/JuratSignatureGrpType/sequence[1]/SignatureDt",
+                    "kind": "element",
+                    "name": "SignatureDt",
+                    "key": "SignatureDt",
+                    "label": "SignatureDt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DateNoTimeZoneType",
+                    "base": "date",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[1-9][0-9]{3}\\-([0][1-9]|[1][0-2])\\-([0][1-9]|[1-2][0-9]|[3][0-1])"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/JuratSignatureGrp/JuratSignatureGrpType/sequence[1]/JuratPersonTitleTxt",
+                    "kind": "element",
+                    "name": "JuratPersonTitleTxt",
+                    "key": "JuratPersonTitleTxt",
+                    "label": "JuratPersonTitleTxt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "JuratPersonTitleType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "35"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form15397DetailType/sequence[1]/JuratSignatureGrp/JuratSignatureGrpType/sequence[1]/PersonNm",
+                    "kind": "element",
+                    "name": "PersonNm",
+                    "key": "PersonNm",
+                    "label": "PersonNm",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "PersonNameType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "35"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([A-Za-z0-9'\\-] ?)*[A-Za-z0-9'\\-]"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          }
+        ],
+        "automatic": false,
+        "sensitive": false
+      }
+    ],
+    "automatic": false,
+    "sensitive": false
+  },
+  "max_records": 1
+}

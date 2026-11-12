@@ -1,0 +1,75 @@
+{
+  "tax_year": 2026,
+  "form": "8027",
+  "header": {
+    "ContactPersonInformationGrp": {
+      "ContactEmailAddressTxt": "synthetic@example.invalid",
+      "ContactPersonNm": "SYNTHETIC CONTACT",
+      "ContactPhoneNum": "2065550100"
+    },
+    "Form8027IssuerDetail": {
+      "BusinessName": {
+        "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+      },
+      "EIN": "000123456",
+      "ForeignEntityInd": "0",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "PhoneNum": "2065550100"
+    }
+  },
+  "records": [
+    {
+      "AllocatedTipsAmt": "80.00",
+      "AverageEmployeeHoursCnt": "1",
+      "CreditDebitCardPaymentNoInd": "0",
+      "CreditDebitCardPaymentYesInd": "1",
+      "DirectlyTippedEmployeesCnt": "0",
+      "EstablishmentGrp": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "EIN": "000123456",
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        }
+      },
+      "EstablishmentNumTxt": "00001",
+      "FinalReturnInd": "0",
+      "FoodOrBeverageEstabTypeCd": "1",
+      "GoodFaithAgreementInd": "0",
+      "GrossReceiptsAmt": "1000.00",
+      "GrossReceiptsMethodInd": "1",
+      "HoursWorkedMethodInd": "0",
+      "IRBinaryAttachmentInd": "0",
+      "JuratSignatureGrp": {
+        "JuratPersonTitleTxt": "OFFICER",
+        "JuratSignaturePIN": "12345",
+        "PersonNm": "SYNTHETIC CONTACT",
+        "SignatureDt": "2027-01-01",
+        "SignatureIntentInd": "1"
+      },
+      "TipPctRtMultGrossRcptsAmt": "80.00",
+      "TipRt": "0.08",
+      "TotChargedRcptsShowTipsAmt": "100.00",
+      "TotSrvcChrgsLessSpcfdPdWgsAmt": "0.00",
+      "TotalChargedTipsAmt": "0.00",
+      "TotalDirectTipsAmt": "0.00",
+      "TotalIndirectTipsAmt": "0.00",
+      "TotalTipsReportedAmt": "0.00",
+      "VolTipAgreementNoInd": "0",
+      "VolTipAgreementYesInd": "0"
+    }
+  ]
+}

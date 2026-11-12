@@ -1,0 +1,3417 @@
+{
+  "tax_year": 2025,
+  "form": "8955SSA",
+  "submission_group": 5,
+  "header": {
+    "id": "header",
+    "kind": "element",
+    "name": "IRSubmission5Header",
+    "key": "IRSubmission5Header",
+    "label": "IRSubmission5Header",
+    "min_occurs": 1,
+    "max_occurs": 1,
+    "type": "IRSubmission5HeaderType",
+    "children": [
+      {
+        "id": "header/IRSubmission5HeaderType/sequence[1]",
+        "kind": "sequence",
+        "label": "",
+        "min_occurs": 1,
+        "max_occurs": 1,
+        "children": [
+          {
+            "id": "header/IRSubmission5HeaderType/sequence[1]/SubmissionId",
+            "kind": "element",
+            "name": "SubmissionId",
+            "key": "SubmissionId",
+            "label": "SubmissionId",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "SubmissionIdType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "maxLength",
+                "value": "8"
+              },
+              {
+                "kind": "pattern",
+                "value": "[1-9][0-9]*"
+              }
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission5HeaderType/sequence[1]/OriginalUniqueSubmissionId",
+            "kind": "element",
+            "name": "OriginalUniqueSubmissionId",
+            "key": "OriginalUniqueSubmissionId",
+            "label": "OriginalUniqueSubmissionId",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "UniqueSubmissionIdType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "([1-9][0-9]{3}-[0-9]{11}-[0-9A-Za-z]{9}\\|[1-9][0-9]{0,7})|(^([1-9][0-9]{3}-[0-9]{11}-[0-9A-Za-z]{9}\\|[1-9][0-9]{0,7})$)|([0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}:IRIS:[A-Za-z0-9]{5}::(A)\\|[1-9][0-9]{0,7})"
+              }
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission5HeaderType/sequence[1]/TaxYr",
+            "kind": "element",
+            "name": "TaxYr",
+            "key": "TaxYr",
+            "label": "TaxYr",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "YearType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "[1-9][0-9]{3}"
+              }
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission5HeaderType/sequence[1]/FormTypeCd",
+            "kind": "element",
+            "name": "FormTypeCd",
+            "key": "FormTypeCd",
+            "label": "FormTypeCd",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "base": "string",
+            "enums": [
+              "8955SSA"
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp",
+            "kind": "element",
+            "name": "PlanAdministratorInfoGrp",
+            "key": "PlanAdministratorInfoGrp",
+            "label": "Plan Administrator Information Group",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "PlanAdministratorInfoGrpType",
+            "children": [
+              {
+                "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/PlanAdministratorsName",
+                    "kind": "element",
+                    "name": "PlanAdministratorsName",
+                    "key": "PlanAdministratorsName",
+                    "label": "PlanAdministratorsName",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "PlanAdministratorBusinessNameType",
+                    "children": [
+                      {
+                        "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName",
+                            "kind": "element",
+                            "name": "BusinessName",
+                            "key": "BusinessName",
+                            "label": "BusinessName",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "BusinessNameType",
+                            "children": [
+                              {
+                                "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine1Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine1Txt",
+                                    "key": "BusinessNameLine1Txt",
+                                    "label": "BusinessNameLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine1Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine2Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine2Txt",
+                                    "key": "BusinessNameLine2Txt",
+                                    "label": "BusinessNameLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine2Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#/%\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#/%\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/InCareOfNm",
+                            "kind": "element",
+                            "name": "InCareOfNm",
+                            "key": "InCareOfNm",
+                            "label": "InCareOfNm",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "InCareOfNmType",
+                            "base": "string",
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/EIN",
+                    "kind": "element",
+                    "name": "EIN",
+                    "key": "EIN",
+                    "label": "EIN (Employer Identification Number)",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "EINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{9}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/ContactPersonPhoneNum",
+                    "kind": "element",
+                    "name": "ContactPersonPhoneNum",
+                    "key": "ContactPersonPhoneNum",
+                    "label": "ContactPersonPhoneNum",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "ContactPhoneNumberType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "minLength",
+                        "value": "10"
+                      },
+                      {
+                        "kind": "maxLength",
+                        "value": "30"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([0-9,])*"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp",
+                    "kind": "element",
+                    "name": "MailingAddressGrp",
+                    "key": "MailingAddressGrp",
+                    "label": "MailingAddressGrp",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "AddressGrpType",
+                    "children": [
+                      {
+                        "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]",
+                        "kind": "choice",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress",
+                            "kind": "element",
+                            "name": "USAddress",
+                            "key": "USAddress",
+                            "label": "Type for a U.S. Address",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "USAddressType",
+                            "children": [
+                              {
+                                "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/AddressLine1Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine1Txt",
+                                    "key": "AddressLine1Txt",
+                                    "label": "AddressLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/AddressLine2Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine2Txt",
+                                    "key": "AddressLine2Txt",
+                                    "label": "AddressLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/CityNm",
+                                    "kind": "element",
+                                    "name": "CityNm",
+                                    "key": "CityNm",
+                                    "label": "CityNm",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "CityType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "40"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z] ?)*[A-Za-z]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/StateAbbreviationCd",
+                                    "kind": "element",
+                                    "name": "StateAbbreviationCd",
+                                    "key": "StateAbbreviationCd",
+                                    "label": "StateAbbreviationCd",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StateType",
+                                    "base": "string",
+                                    "enums": [
+                                      "AL",
+                                      "AK",
+                                      "AS",
+                                      "AZ",
+                                      "AR",
+                                      "CA",
+                                      "CO",
+                                      "MP",
+                                      "CT",
+                                      "DE",
+                                      "DC",
+                                      "FM",
+                                      "FL",
+                                      "GA",
+                                      "GU",
+                                      "HI",
+                                      "ID",
+                                      "IL",
+                                      "IN",
+                                      "IA",
+                                      "KS",
+                                      "KY",
+                                      "LA",
+                                      "ME",
+                                      "MH",
+                                      "MD",
+                                      "MA",
+                                      "MI",
+                                      "MN",
+                                      "MS",
+                                      "MO",
+                                      "MT",
+                                      "NE",
+                                      "NV",
+                                      "NH",
+                                      "NJ",
+                                      "NM",
+                                      "NY",
+                                      "NC",
+                                      "ND",
+                                      "OH",
+                                      "OK",
+                                      "OR",
+                                      "PW",
+                                      "PA",
+                                      "PR",
+                                      "RI",
+                                      "SC",
+                                      "SD",
+                                      "TN",
+                                      "TX",
+                                      "VI",
+                                      "UT",
+                                      "VT",
+                                      "VA",
+                                      "WA",
+                                      "WV",
+                                      "WI",
+                                      "WY",
+                                      "AA",
+                                      "AE",
+                                      "AP"
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/ZIPCd",
+                                    "kind": "element",
+                                    "name": "ZIPCd",
+                                    "key": "ZIPCd",
+                                    "label": "ZIPCd",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "ZIPCodeType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[0-9]{5}(([0-9]{4})|([0-9]{7}))?"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress",
+                            "kind": "element",
+                            "name": "ForeignAddress",
+                            "key": "ForeignAddress",
+                            "label": "Type for a Foreign Address",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "ForeignAddressType",
+                            "children": [
+                              {
+                                "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/AddressLine1Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine1Txt",
+                                    "key": "AddressLine1Txt",
+                                    "label": "AddressLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/AddressLine2Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine2Txt",
+                                    "key": "AddressLine2Txt",
+                                    "label": "AddressLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/CityNm",
+                                    "kind": "element",
+                                    "name": "CityNm",
+                                    "key": "CityNm",
+                                    "label": "City",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "50"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z] ?)*[A-Za-z]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/ProvinceOrStateNm",
+                                    "kind": "element",
+                                    "name": "ProvinceOrStateNm",
+                                    "key": "ProvinceOrStateNm",
+                                    "label": "Province or state",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                                      },
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "17"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/CountryCd",
+                                    "kind": "element",
+                                    "name": "CountryCd",
+                                    "key": "CountryCd",
+                                    "label": "Country",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "CountryType",
+                                    "base": "string",
+                                    "enums": [
+                                      "AF",
+                                      "AX",
+                                      "AL",
+                                      "AG",
+                                      "AQ",
+                                      "AN",
+                                      "AO",
+                                      "AV",
+                                      "AY",
+                                      "AC",
+                                      "AR",
+                                      "AM",
+                                      "AA",
+                                      "AT",
+                                      "AS",
+                                      "AU",
+                                      "AJ",
+                                      "BF",
+                                      "BA",
+                                      "FQ",
+                                      "BG",
+                                      "BB",
+                                      "BO",
+                                      "BE",
+                                      "BH",
+                                      "BN",
+                                      "BD",
+                                      "BT",
+                                      "BL",
+                                      "BK",
+                                      "BC",
+                                      "BV",
+                                      "BR",
+                                      "IO",
+                                      "VI",
+                                      "BX",
+                                      "BU",
+                                      "UV",
+                                      "BM",
+                                      "BY",
+                                      "CB",
+                                      "CM",
+                                      "CA",
+                                      "CV",
+                                      "CJ",
+                                      "CT",
+                                      "CD",
+                                      "CI",
+                                      "CH",
+                                      "KT",
+                                      "IP",
+                                      "CK",
+                                      "CO",
+                                      "CN",
+                                      "CF",
+                                      "CG",
+                                      "CW",
+                                      "CR",
+                                      "CS",
+                                      "IV",
+                                      "HR",
+                                      "CU",
+                                      "UC",
+                                      "CY",
+                                      "EZ",
+                                      "DA",
+                                      "DX",
+                                      "DJ",
+                                      "DO",
+                                      "DR",
+                                      "TT",
+                                      "EC",
+                                      "EG",
+                                      "ES",
+                                      "EK",
+                                      "ER",
+                                      "EN",
+                                      "ET",
+                                      "FK",
+                                      "FO",
+                                      "FM",
+                                      "FJ",
+                                      "FI",
+                                      "FR",
+                                      "FP",
+                                      "FS",
+                                      "GB",
+                                      "GA",
+                                      "GG",
+                                      "GM",
+                                      "GH",
+                                      "GI",
+                                      "GR",
+                                      "GL",
+                                      "GJ",
+                                      "GQ",
+                                      "GT",
+                                      "GK",
+                                      "GV",
+                                      "PU",
+                                      "GY",
+                                      "HA",
+                                      "HM",
+                                      "VT",
+                                      "HO",
+                                      "HK",
+                                      "HQ",
+                                      "HU",
+                                      "IC",
+                                      "IN",
+                                      "ID",
+                                      "IR",
+                                      "IZ",
+                                      "EI",
+                                      "IS",
+                                      "IT",
+                                      "JM",
+                                      "JN",
+                                      "JA",
+                                      "DQ",
+                                      "JE",
+                                      "JQ",
+                                      "JO",
+                                      "KZ",
+                                      "KE",
+                                      "KQ",
+                                      "KR",
+                                      "KN",
+                                      "KS",
+                                      "KV",
+                                      "KU",
+                                      "KG",
+                                      "LA",
+                                      "LG",
+                                      "LE",
+                                      "LT",
+                                      "LI",
+                                      "LY",
+                                      "LS",
+                                      "LH",
+                                      "LU",
+                                      "MC",
+                                      "MK",
+                                      "MA",
+                                      "MI",
+                                      "MY",
+                                      "MV",
+                                      "ML",
+                                      "MT",
+                                      "IM",
+                                      "RM",
+                                      "MR",
+                                      "MP",
+                                      "MX",
+                                      "MQ",
+                                      "MD",
+                                      "MN",
+                                      "MG",
+                                      "MJ",
+                                      "MH",
+                                      "MO",
+                                      "MZ",
+                                      "WA",
+                                      "NR",
+                                      "BQ",
+                                      "NP",
+                                      "NL",
+                                      "NC",
+                                      "NZ",
+                                      "NU",
+                                      "NG",
+                                      "NI",
+                                      "NE",
+                                      "NF",
+                                      "CQ",
+                                      "NO",
+                                      "MU",
+                                      "OC",
+                                      "PK",
+                                      "PS",
+                                      "LQ",
+                                      "PM",
+                                      "PP",
+                                      "PF",
+                                      "PA",
+                                      "PE",
+                                      "RP",
+                                      "PC",
+                                      "PL",
+                                      "PO",
+                                      "RQ",
+                                      "QA",
+                                      "RO",
+                                      "RS",
+                                      "RW",
+                                      "TB",
+                                      "RN",
+                                      "WS",
+                                      "SM",
+                                      "TP",
+                                      "SA",
+                                      "SG",
+                                      "RI",
+                                      "SE",
+                                      "SL",
+                                      "SN",
+                                      "NN",
+                                      "LO",
+                                      "SI",
+                                      "BP",
+                                      "SO",
+                                      "SF",
+                                      "SX",
+                                      "OD",
+                                      "SP",
+                                      "PG",
+                                      "CE",
+                                      "SH",
+                                      "SC",
+                                      "ST",
+                                      "SB",
+                                      "VC",
+                                      "SU",
+                                      "NS",
+                                      "SV",
+                                      "WZ",
+                                      "SW",
+                                      "SZ",
+                                      "SY",
+                                      "TW",
+                                      "TI",
+                                      "TZ",
+                                      "TH",
+                                      "TO",
+                                      "TL",
+                                      "TN",
+                                      "TD",
+                                      "TS",
+                                      "TU",
+                                      "TX",
+                                      "TK",
+                                      "TV",
+                                      "UG",
+                                      "UP",
+                                      "AE",
+                                      "UK",
+                                      "UY",
+                                      "UZ",
+                                      "NH",
+                                      "VE",
+                                      "VM",
+                                      "VQ",
+                                      "WQ",
+                                      "WF",
+                                      "WI",
+                                      "YM",
+                                      "ZA",
+                                      "ZI"
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  },
+                                  {
+                                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdministratorInfoGrp/PlanAdministratorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/ForeignPostalCd",
+                                    "kind": "element",
+                                    "name": "ForeignPostalCd",
+                                    "key": "ForeignPostalCd",
+                                    "label": "Postal code",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                                      },
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "16"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdminJuratSignatureGrp",
+            "kind": "element",
+            "name": "PlanAdminJuratSignatureGrp",
+            "key": "PlanAdminJuratSignatureGrp",
+            "label": "Plan administrator jurat signature group\",",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "JuratSignatureGrpType",
+            "children": [
+              {
+                "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdminJuratSignatureGrp/JuratSignatureGrpType/sequence[1]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdminJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/SignatureIntentInd",
+                    "kind": "element",
+                    "name": "SignatureIntentInd",
+                    "key": "SignatureIntentInd",
+                    "label": "SignatureIntentInd",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DigitBooleanType",
+                    "base": "string",
+                    "enums": [
+                      "0",
+                      "1"
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdminJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/JuratSignaturePIN",
+                    "kind": "element",
+                    "name": "JuratSignaturePIN",
+                    "key": "JuratSignaturePIN",
+                    "label": "JuratSignaturePIN",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "JuratSignaturePINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{5}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdminJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/SignatureDt",
+                    "kind": "element",
+                    "name": "SignatureDt",
+                    "key": "SignatureDt",
+                    "label": "SignatureDt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DateNoTimeZoneType",
+                    "base": "date",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[1-9][0-9]{3}\\-([0][1-9]|[1][0-2])\\-([0][1-9]|[1-2][0-9]|[3][0-1])"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdminJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/JuratPersonTitleTxt",
+                    "kind": "element",
+                    "name": "JuratPersonTitleTxt",
+                    "key": "JuratPersonTitleTxt",
+                    "label": "JuratPersonTitleTxt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "JuratPersonTitleType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "35"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "header/IRSubmission5HeaderType/sequence[1]/PlanAdminJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/PersonNm",
+                    "kind": "element",
+                    "name": "PersonNm",
+                    "key": "PersonNm",
+                    "label": "PersonNm",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "PersonNameType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "35"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([A-Za-z0-9'\\-] ?)*[A-Za-z0-9'\\-]"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "header/IRSubmission5HeaderType/sequence[1]/TotalReportedRcpntFormCnt",
+            "kind": "element",
+            "name": "TotalReportedRcpntFormCnt",
+            "key": "TotalReportedRcpntFormCnt",
+            "label": "Total Reported Recipient Form Count",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "TotalNumberNonNegativeType",
+            "base": "nonNegativeInteger",
+            "facets": [
+              {
+                "kind": "totalDigits",
+                "value": "10"
+              }
+            ],
+            "automatic": true,
+            "sensitive": false
+          }
+        ],
+        "automatic": false,
+        "sensitive": false
+      }
+    ],
+    "automatic": false,
+    "sensitive": false
+  },
+  "record": {
+    "id": "record",
+    "kind": "element",
+    "name": "Form8955SSADetail",
+    "key": "Form8955SSADetail",
+    "label": "Form8955SSADetail",
+    "min_occurs": 1,
+    "max_occurs": 1,
+    "type": "Form8955SSADetailType",
+    "children": [
+      {
+        "id": "record/Form8955SSADetailType/sequence[1]",
+        "kind": "sequence",
+        "label": "",
+        "min_occurs": 1,
+        "max_occurs": 1,
+        "children": [
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/RecordId",
+            "kind": "element",
+            "name": "RecordId",
+            "key": "RecordId",
+            "label": "Record Identifier",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "RecordIdType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "maxLength",
+                "value": "8"
+              },
+              {
+                "kind": "pattern",
+                "value": "[1-9][0-9]*"
+              }
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/ContinuationInd",
+            "kind": "element",
+            "name": "ContinuationInd",
+            "key": "ContinuationInd",
+            "label": "Continuation Identifier to track file size limit",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/ContinuationSeqNum",
+            "kind": "element",
+            "name": "ContinuationSeqNum",
+            "key": "ContinuationSeqNum",
+            "label": "Countinuation Sequence Number",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "Integer3NNType",
+            "base": "integer",
+            "facets": [
+              {
+                "kind": "minInclusive",
+                "value": "1"
+              },
+              {
+                "kind": "maxInclusive",
+                "value": "999"
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/VoluntaryFilerInd",
+            "kind": "element",
+            "name": "VoluntaryFilerInd",
+            "key": "VoluntaryFilerInd",
+            "label": "Voluntary Filer",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/AmendedInd",
+            "kind": "element",
+            "name": "AmendedInd",
+            "key": "AmendedInd",
+            "label": "Amended Indicator",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": true,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/Form5558Ind",
+            "kind": "element",
+            "name": "Form5558Ind",
+            "key": "Form5558Ind",
+            "label": "Form 5558 Indicator",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/AutomaticExtensionInd",
+            "kind": "element",
+            "name": "AutomaticExtensionInd",
+            "key": "AutomaticExtensionInd",
+            "label": "Automatic Extension Indicator",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/SpecialExtensionInd",
+            "kind": "element",
+            "name": "SpecialExtensionInd",
+            "key": "SpecialExtensionInd",
+            "label": "Special Extension Indicator",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/SpecialExtensionDesc",
+            "kind": "element",
+            "name": "SpecialExtensionDesc",
+            "key": "SpecialExtensionDesc",
+            "label": "Special Extension Description",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "TextType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PlanYearBeginDt",
+            "kind": "element",
+            "name": "PlanYearBeginDt",
+            "key": "PlanYearBeginDt",
+            "label": "Plan Year Begin Date",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DateNoTimeZoneType",
+            "base": "date",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "[1-9][0-9]{3}\\-([0][1-9]|[1][0-2])\\-([0][1-9]|[1-2][0-9]|[3][0-1])"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PlanYearEndDt",
+            "kind": "element",
+            "name": "PlanYearEndDt",
+            "key": "PlanYearEndDt",
+            "label": "Plan Year End Date",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DateNoTimeZoneType",
+            "base": "date",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "[1-9][0-9]{3}\\-([0][1-9]|[1][0-2])\\-([0][1-9]|[1-2][0-9]|[3][0-1])"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/AdministratorSameAsSponsorInd",
+            "kind": "element",
+            "name": "AdministratorSameAsSponsorInd",
+            "key": "AdministratorSameAsSponsorInd",
+            "label": "Select if the Administrator and Sponsor are the same",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PlanNameTxt",
+            "kind": "element",
+            "name": "PlanNameTxt",
+            "key": "PlanNameTxt",
+            "label": "Name Of Plan",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "TextType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PlanNumTxt",
+            "kind": "element",
+            "name": "PlanNumTxt",
+            "key": "PlanNumTxt",
+            "label": "Plan Number (PN)",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+              },
+              {
+                "kind": "pattern",
+                "value": "([1-9][0-9]{2})|([0-9][1-9][0-9])|([0-9]{2}[1-9])"
+              },
+              {
+                "kind": "maxLength",
+                "value": "3"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp",
+            "kind": "element",
+            "name": "PrevSubmittedInfoGrp",
+            "key": "PrevSubmittedInfoGrp",
+            "label": "Previously Submitted Sponsor and Administrator Information Group",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "PrevSubmittedInfoGrpType",
+            "children": [
+              {
+                "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/UniqueRecordId",
+                    "kind": "element",
+                    "name": "UniqueRecordId",
+                    "key": "UniqueRecordId",
+                    "label": "UniqueRecordId",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "UniqueRecordIdType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[1-9][0-9]{3}\\-[0-9]{11}\\-[0-9a-zA-Z]{9}\\|[1-9][0-9]{0,7}\\|[1-9][0-9]{0,7}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/OtherIntakeSystemInd",
+                    "kind": "element",
+                    "name": "OtherIntakeSystemInd",
+                    "key": "OtherIntakeSystemInd",
+                    "label": "OtherIntakeSystemInd",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DigitBooleanType",
+                    "base": "string",
+                    "enums": [
+                      "0",
+                      "1"
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/OtherIntakeSystemNm",
+                    "kind": "element",
+                    "name": "OtherIntakeSystemNm",
+                    "key": "OtherIntakeSystemNm",
+                    "label": "OtherIntakeSystemNm",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "OtherIntakeSystemNameType",
+                    "base": "string",
+                    "enums": [
+                      "FIRE",
+                      "Third Party"
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName",
+                    "kind": "element",
+                    "name": "PlanSponsorName",
+                    "key": "PlanSponsorName",
+                    "label": "PlanSponsorName",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "PlanSponsorBusinessNameType",
+                    "children": [
+                      {
+                        "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName/PlanSponsorBusinessNameType/sequence[0]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName/PlanSponsorBusinessNameType/sequence[0]/BusinessName",
+                            "kind": "element",
+                            "name": "BusinessName",
+                            "key": "BusinessName",
+                            "label": "BusinessName",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "BusinessNameType",
+                            "children": [
+                              {
+                                "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName/PlanSponsorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName/PlanSponsorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine1Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine1Txt",
+                                    "key": "BusinessNameLine1Txt",
+                                    "label": "BusinessNameLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine1Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName/PlanSponsorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine2Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine2Txt",
+                                    "key": "BusinessNameLine2Txt",
+                                    "label": "BusinessNameLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine2Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#/%\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#/%\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName/PlanSponsorBusinessNameType/sequence[0]/InCareOfNm",
+                            "kind": "element",
+                            "name": "InCareOfNm",
+                            "key": "InCareOfNm",
+                            "label": "InCareOfNm",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "InCareOfNmType",
+                            "base": "string",
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorName/PlanSponsorBusinessNameType/sequence[0]/TradeNm",
+                            "kind": "element",
+                            "name": "TradeNm",
+                            "key": "TradeNm",
+                            "label": "TradeNm",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "BusinessNameLine1Type",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "maxLength",
+                                "value": "75"
+                              },
+                              {
+                                "kind": "pattern",
+                                "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanSponsorEIN",
+                    "kind": "element",
+                    "name": "PlanSponsorEIN",
+                    "key": "PlanSponsorEIN",
+                    "label": "PlanSponsorEIN",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "EINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{9}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorsName",
+                    "kind": "element",
+                    "name": "PlanAdministratorsName",
+                    "key": "PlanAdministratorsName",
+                    "label": "PlanAdministratorsName",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "PlanAdministratorBusinessNameType",
+                    "children": [
+                      {
+                        "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName",
+                            "kind": "element",
+                            "name": "BusinessName",
+                            "key": "BusinessName",
+                            "label": "BusinessName",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "BusinessNameType",
+                            "children": [
+                              {
+                                "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine1Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine1Txt",
+                                    "key": "BusinessNameLine1Txt",
+                                    "label": "BusinessNameLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine1Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine2Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine2Txt",
+                                    "key": "BusinessNameLine2Txt",
+                                    "label": "BusinessNameLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine2Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#/%\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#/%\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorsName/PlanAdministratorBusinessNameType/sequence[0]/InCareOfNm",
+                            "kind": "element",
+                            "name": "InCareOfNm",
+                            "key": "InCareOfNm",
+                            "label": "InCareOfNm",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "InCareOfNmType",
+                            "base": "string",
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PrevSubmittedInfoGrp/PrevSubmittedInfoGrpType/sequence[1]/PlanAdministratorEIN",
+                    "kind": "element",
+                    "name": "PlanAdministratorEIN",
+                    "key": "PlanAdministratorEIN",
+                    "label": "PlanAdministratorEIN",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "EINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{9}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp",
+            "kind": "element",
+            "name": "PlanSponsorInfoGrp",
+            "key": "PlanSponsorInfoGrp",
+            "label": "Plan Sponsor Information Group",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "PlanSponsorInfoGrpType",
+            "children": [
+              {
+                "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName",
+                    "kind": "element",
+                    "name": "PlanSponsorBusinessName",
+                    "key": "PlanSponsorBusinessName",
+                    "label": "PlanSponsorBusinessName",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "PlanSponsorBusinessNameType",
+                    "children": [
+                      {
+                        "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName/PlanSponsorBusinessNameType/sequence[0]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName/PlanSponsorBusinessNameType/sequence[0]/BusinessName",
+                            "kind": "element",
+                            "name": "BusinessName",
+                            "key": "BusinessName",
+                            "label": "BusinessName",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "BusinessNameType",
+                            "children": [
+                              {
+                                "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName/PlanSponsorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName/PlanSponsorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine1Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine1Txt",
+                                    "key": "BusinessNameLine1Txt",
+                                    "label": "BusinessNameLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine1Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName/PlanSponsorBusinessNameType/sequence[0]/BusinessName/BusinessNameType/sequence[0]/BusinessNameLine2Txt",
+                                    "kind": "element",
+                                    "name": "BusinessNameLine2Txt",
+                                    "key": "BusinessNameLine2Txt",
+                                    "label": "BusinessNameLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "BusinessNameLine2Type",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "75"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "(([A-Za-z0-9#/%\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#/%\\-\\(\\)]|\u0026|')"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName/PlanSponsorBusinessNameType/sequence[0]/InCareOfNm",
+                            "kind": "element",
+                            "name": "InCareOfNm",
+                            "key": "InCareOfNm",
+                            "label": "InCareOfNm",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "InCareOfNmType",
+                            "base": "string",
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/PlanSponsorBusinessName/PlanSponsorBusinessNameType/sequence[0]/TradeNm",
+                            "kind": "element",
+                            "name": "TradeNm",
+                            "key": "TradeNm",
+                            "label": "TradeNm",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "BusinessNameLine1Type",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "maxLength",
+                                "value": "75"
+                              },
+                              {
+                                "kind": "pattern",
+                                "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/EIN",
+                    "kind": "element",
+                    "name": "EIN",
+                    "key": "EIN",
+                    "label": "EIN (Employer Identification Number)",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "EINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{9}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/ContactPersonPhoneNum",
+                    "kind": "element",
+                    "name": "ContactPersonPhoneNum",
+                    "key": "ContactPersonPhoneNum",
+                    "label": "ContactPersonPhoneNum",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "ContactPhoneNumberType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "minLength",
+                        "value": "10"
+                      },
+                      {
+                        "kind": "maxLength",
+                        "value": "30"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([0-9,])*"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp",
+                    "kind": "element",
+                    "name": "MailingAddressGrp",
+                    "key": "MailingAddressGrp",
+                    "label": "MailingAddressGrp",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "AddressGrpType",
+                    "children": [
+                      {
+                        "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]",
+                        "kind": "choice",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress",
+                            "kind": "element",
+                            "name": "USAddress",
+                            "key": "USAddress",
+                            "label": "Type for a U.S. Address",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "USAddressType",
+                            "children": [
+                              {
+                                "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/AddressLine1Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine1Txt",
+                                    "key": "AddressLine1Txt",
+                                    "label": "AddressLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/AddressLine2Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine2Txt",
+                                    "key": "AddressLine2Txt",
+                                    "label": "AddressLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/CityNm",
+                                    "kind": "element",
+                                    "name": "CityNm",
+                                    "key": "CityNm",
+                                    "label": "CityNm",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "CityType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "40"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z] ?)*[A-Za-z]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/StateAbbreviationCd",
+                                    "kind": "element",
+                                    "name": "StateAbbreviationCd",
+                                    "key": "StateAbbreviationCd",
+                                    "label": "StateAbbreviationCd",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StateType",
+                                    "base": "string",
+                                    "enums": [
+                                      "AL",
+                                      "AK",
+                                      "AS",
+                                      "AZ",
+                                      "AR",
+                                      "CA",
+                                      "CO",
+                                      "MP",
+                                      "CT",
+                                      "DE",
+                                      "DC",
+                                      "FM",
+                                      "FL",
+                                      "GA",
+                                      "GU",
+                                      "HI",
+                                      "ID",
+                                      "IL",
+                                      "IN",
+                                      "IA",
+                                      "KS",
+                                      "KY",
+                                      "LA",
+                                      "ME",
+                                      "MH",
+                                      "MD",
+                                      "MA",
+                                      "MI",
+                                      "MN",
+                                      "MS",
+                                      "MO",
+                                      "MT",
+                                      "NE",
+                                      "NV",
+                                      "NH",
+                                      "NJ",
+                                      "NM",
+                                      "NY",
+                                      "NC",
+                                      "ND",
+                                      "OH",
+                                      "OK",
+                                      "OR",
+                                      "PW",
+                                      "PA",
+                                      "PR",
+                                      "RI",
+                                      "SC",
+                                      "SD",
+                                      "TN",
+                                      "TX",
+                                      "VI",
+                                      "UT",
+                                      "VT",
+                                      "VA",
+                                      "WA",
+                                      "WV",
+                                      "WI",
+                                      "WY",
+                                      "AA",
+                                      "AE",
+                                      "AP"
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/USAddress/USAddressType/sequence[0]/ZIPCd",
+                                    "kind": "element",
+                                    "name": "ZIPCd",
+                                    "key": "ZIPCd",
+                                    "label": "ZIPCd",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "ZIPCodeType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[0-9]{5}(([0-9]{4})|([0-9]{7}))?"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress",
+                            "kind": "element",
+                            "name": "ForeignAddress",
+                            "key": "ForeignAddress",
+                            "label": "Type for a Foreign Address",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "ForeignAddressType",
+                            "children": [
+                              {
+                                "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]",
+                                "kind": "sequence",
+                                "label": "",
+                                "min_occurs": 1,
+                                "max_occurs": 1,
+                                "children": [
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/AddressLine1Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine1Txt",
+                                    "key": "AddressLine1Txt",
+                                    "label": "AddressLine1Txt",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/AddressLine2Txt",
+                                    "kind": "element",
+                                    "name": "AddressLine2Txt",
+                                    "key": "AddressLine2Txt",
+                                    "label": "AddressLine2Txt",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "type": "StreetAddressType",
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "35"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "[A-Za-z0-9]( ?[A-Za-z0-9\\-/])*"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/CityNm",
+                                    "kind": "element",
+                                    "name": "CityNm",
+                                    "key": "CityNm",
+                                    "label": "City",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "50"
+                                      },
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([A-Za-z] ?)*[A-Za-z]"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/ProvinceOrStateNm",
+                                    "kind": "element",
+                                    "name": "ProvinceOrStateNm",
+                                    "key": "ProvinceOrStateNm",
+                                    "label": "Province or state",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                                      },
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "17"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": true
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/CountryCd",
+                                    "kind": "element",
+                                    "name": "CountryCd",
+                                    "key": "CountryCd",
+                                    "label": "Country",
+                                    "min_occurs": 1,
+                                    "max_occurs": 1,
+                                    "type": "CountryType",
+                                    "base": "string",
+                                    "enums": [
+                                      "AF",
+                                      "AX",
+                                      "AL",
+                                      "AG",
+                                      "AQ",
+                                      "AN",
+                                      "AO",
+                                      "AV",
+                                      "AY",
+                                      "AC",
+                                      "AR",
+                                      "AM",
+                                      "AA",
+                                      "AT",
+                                      "AS",
+                                      "AU",
+                                      "AJ",
+                                      "BF",
+                                      "BA",
+                                      "FQ",
+                                      "BG",
+                                      "BB",
+                                      "BO",
+                                      "BE",
+                                      "BH",
+                                      "BN",
+                                      "BD",
+                                      "BT",
+                                      "BL",
+                                      "BK",
+                                      "BC",
+                                      "BV",
+                                      "BR",
+                                      "IO",
+                                      "VI",
+                                      "BX",
+                                      "BU",
+                                      "UV",
+                                      "BM",
+                                      "BY",
+                                      "CB",
+                                      "CM",
+                                      "CA",
+                                      "CV",
+                                      "CJ",
+                                      "CT",
+                                      "CD",
+                                      "CI",
+                                      "CH",
+                                      "KT",
+                                      "IP",
+                                      "CK",
+                                      "CO",
+                                      "CN",
+                                      "CF",
+                                      "CG",
+                                      "CW",
+                                      "CR",
+                                      "CS",
+                                      "IV",
+                                      "HR",
+                                      "CU",
+                                      "UC",
+                                      "CY",
+                                      "EZ",
+                                      "DA",
+                                      "DX",
+                                      "DJ",
+                                      "DO",
+                                      "DR",
+                                      "TT",
+                                      "EC",
+                                      "EG",
+                                      "ES",
+                                      "EK",
+                                      "ER",
+                                      "EN",
+                                      "ET",
+                                      "FK",
+                                      "FO",
+                                      "FM",
+                                      "FJ",
+                                      "FI",
+                                      "FR",
+                                      "FP",
+                                      "FS",
+                                      "GB",
+                                      "GA",
+                                      "GG",
+                                      "GM",
+                                      "GH",
+                                      "GI",
+                                      "GR",
+                                      "GL",
+                                      "GJ",
+                                      "GQ",
+                                      "GT",
+                                      "GK",
+                                      "GV",
+                                      "PU",
+                                      "GY",
+                                      "HA",
+                                      "HM",
+                                      "VT",
+                                      "HO",
+                                      "HK",
+                                      "HQ",
+                                      "HU",
+                                      "IC",
+                                      "IN",
+                                      "ID",
+                                      "IR",
+                                      "IZ",
+                                      "EI",
+                                      "IS",
+                                      "IT",
+                                      "JM",
+                                      "JN",
+                                      "JA",
+                                      "DQ",
+                                      "JE",
+                                      "JQ",
+                                      "JO",
+                                      "KZ",
+                                      "KE",
+                                      "KQ",
+                                      "KR",
+                                      "KN",
+                                      "KS",
+                                      "KV",
+                                      "KU",
+                                      "KG",
+                                      "LA",
+                                      "LG",
+                                      "LE",
+                                      "LT",
+                                      "LI",
+                                      "LY",
+                                      "LS",
+                                      "LH",
+                                      "LU",
+                                      "MC",
+                                      "MK",
+                                      "MA",
+                                      "MI",
+                                      "MY",
+                                      "MV",
+                                      "ML",
+                                      "MT",
+                                      "IM",
+                                      "RM",
+                                      "MR",
+                                      "MP",
+                                      "MX",
+                                      "MQ",
+                                      "MD",
+                                      "MN",
+                                      "MG",
+                                      "MJ",
+                                      "MH",
+                                      "MO",
+                                      "MZ",
+                                      "WA",
+                                      "NR",
+                                      "BQ",
+                                      "NP",
+                                      "NL",
+                                      "NC",
+                                      "NZ",
+                                      "NU",
+                                      "NG",
+                                      "NI",
+                                      "NE",
+                                      "NF",
+                                      "CQ",
+                                      "NO",
+                                      "MU",
+                                      "OC",
+                                      "PK",
+                                      "PS",
+                                      "LQ",
+                                      "PM",
+                                      "PP",
+                                      "PF",
+                                      "PA",
+                                      "PE",
+                                      "RP",
+                                      "PC",
+                                      "PL",
+                                      "PO",
+                                      "RQ",
+                                      "QA",
+                                      "RO",
+                                      "RS",
+                                      "RW",
+                                      "TB",
+                                      "RN",
+                                      "WS",
+                                      "SM",
+                                      "TP",
+                                      "SA",
+                                      "SG",
+                                      "RI",
+                                      "SE",
+                                      "SL",
+                                      "SN",
+                                      "NN",
+                                      "LO",
+                                      "SI",
+                                      "BP",
+                                      "SO",
+                                      "SF",
+                                      "SX",
+                                      "OD",
+                                      "SP",
+                                      "PG",
+                                      "CE",
+                                      "SH",
+                                      "SC",
+                                      "ST",
+                                      "SB",
+                                      "VC",
+                                      "SU",
+                                      "NS",
+                                      "SV",
+                                      "WZ",
+                                      "SW",
+                                      "SZ",
+                                      "SY",
+                                      "TW",
+                                      "TI",
+                                      "TZ",
+                                      "TH",
+                                      "TO",
+                                      "TL",
+                                      "TN",
+                                      "TD",
+                                      "TS",
+                                      "TU",
+                                      "TX",
+                                      "TK",
+                                      "TV",
+                                      "UG",
+                                      "UP",
+                                      "AE",
+                                      "UK",
+                                      "UY",
+                                      "UZ",
+                                      "NH",
+                                      "VE",
+                                      "VM",
+                                      "VQ",
+                                      "WQ",
+                                      "WF",
+                                      "WI",
+                                      "YM",
+                                      "ZA",
+                                      "ZI"
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  },
+                                  {
+                                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorInfoGrp/PlanSponsorInfoGrpType/sequence[0]/MailingAddressGrp/AddressGrpType/choice[1]/ForeignAddress/ForeignAddressType/sequence[0]/ForeignPostalCd",
+                                    "kind": "element",
+                                    "name": "ForeignPostalCd",
+                                    "key": "ForeignPostalCd",
+                                    "label": "Postal code",
+                                    "min_occurs": 0,
+                                    "max_occurs": 1,
+                                    "base": "string",
+                                    "facets": [
+                                      {
+                                        "kind": "pattern",
+                                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                                      },
+                                      {
+                                        "kind": "maxLength",
+                                        "value": "16"
+                                      }
+                                    ],
+                                    "automatic": false,
+                                    "sensitive": false
+                                  }
+                                ],
+                                "automatic": false,
+                                "sensitive": false
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/LastReportedPlanAdminName",
+            "kind": "element",
+            "name": "LastReportedPlanAdminName",
+            "key": "LastReportedPlanAdminName",
+            "label": "\"Plan administrator's prior name",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "BusinessNameType",
+            "children": [
+              {
+                "id": "record/Form8955SSADetailType/sequence[1]/LastReportedPlanAdminName/BusinessNameType/sequence[0]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/LastReportedPlanAdminName/BusinessNameType/sequence[0]/BusinessNameLine1Txt",
+                    "kind": "element",
+                    "name": "BusinessNameLine1Txt",
+                    "key": "BusinessNameLine1Txt",
+                    "label": "BusinessNameLine1Txt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "BusinessNameLine1Type",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "75"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/LastReportedPlanAdminName/BusinessNameType/sequence[0]/BusinessNameLine2Txt",
+                    "kind": "element",
+                    "name": "BusinessNameLine2Txt",
+                    "key": "BusinessNameLine2Txt",
+                    "label": "BusinessNameLine2Txt",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "BusinessNameLine2Type",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "75"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "(([A-Za-z0-9#/%\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#/%\\-\\(\\)]|\u0026|')"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/LastReportedPlanAdminEIN",
+            "kind": "element",
+            "name": "LastReportedPlanAdminEIN",
+            "key": "LastReportedPlanAdminEIN",
+            "label": "EIN (Employer Identification Number)",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "EINType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "[0-9]{9}"
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/LastReportedSponsorName",
+            "kind": "element",
+            "name": "LastReportedSponsorName",
+            "key": "LastReportedSponsorName",
+            "label": "Plan sponsor's prior name",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "BusinessNameType",
+            "children": [
+              {
+                "id": "record/Form8955SSADetailType/sequence[1]/LastReportedSponsorName/BusinessNameType/sequence[0]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/LastReportedSponsorName/BusinessNameType/sequence[0]/BusinessNameLine1Txt",
+                    "kind": "element",
+                    "name": "BusinessNameLine1Txt",
+                    "key": "BusinessNameLine1Txt",
+                    "label": "BusinessNameLine1Txt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "BusinessNameLine1Type",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "75"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "(([A-Za-z0-9#\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#\\-\\(\\)]|\u0026|')"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/LastReportedSponsorName/BusinessNameType/sequence[0]/BusinessNameLine2Txt",
+                    "kind": "element",
+                    "name": "BusinessNameLine2Txt",
+                    "key": "BusinessNameLine2Txt",
+                    "label": "BusinessNameLine2Txt",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "BusinessNameLine2Type",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "75"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "(([A-Za-z0-9#/%\\-\\(\\)]|\u0026|') ?)*([A-Za-z0-9#/%\\-\\(\\)]|\u0026|')"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/LastReportedSponsorEIN",
+            "kind": "element",
+            "name": "LastReportedSponsorEIN",
+            "key": "LastReportedSponsorEIN",
+            "label": "EIN (Employer Identification Number)",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "EINType",
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "[0-9]{9}"
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/LastReportedPlanNumTxt",
+            "kind": "element",
+            "name": "LastReportedPlanNumTxt",
+            "key": "LastReportedPlanNumTxt",
+            "label": "The prior plan number reported on the last return",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "base": "string",
+            "facets": [
+              {
+                "kind": "pattern",
+                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+              },
+              {
+                "kind": "maxLength",
+                "value": "3"
+              },
+              {
+                "kind": "pattern",
+                "value": "([1-9][0-9]{2})|([0-9][1-9][0-9])|([0-9]{2}[1-9])"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PartcpDefrdVstdBnftRqrCnt",
+            "kind": "element",
+            "name": "PartcpDefrdVstdBnftRqrCnt",
+            "key": "PartcpDefrdVstdBnftRqrCnt",
+            "label": "\"The number of separated participants with deferred vested benefit required to be reported",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "TotalNumberNonNegativeType",
+            "base": "nonNegativeInteger",
+            "facets": [
+              {
+                "kind": "totalDigits",
+                "value": "10"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PartcpDefrdVstdBnftVlntryCnt",
+            "kind": "element",
+            "name": "PartcpDefrdVstdBnftVlntryCnt",
+            "key": "PartcpDefrdVstdBnftVlntryCnt",
+            "label": "The number of separated participants with deferred vested benefit voluntarily reported",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "TotalNumberNonNegativeType",
+            "base": "nonNegativeInteger",
+            "facets": [
+              {
+                "kind": "totalDigits",
+                "value": "10"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/TotalParticipantCnt",
+            "kind": "element",
+            "name": "TotalParticipantCnt",
+            "key": "TotalParticipantCnt",
+            "label": "Total number of participants reported on form",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "TotalNumberNonNegativeType",
+            "base": "nonNegativeInteger",
+            "facets": [
+              {
+                "kind": "totalDigits",
+                "value": "10"
+              }
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/ProvidedRqrStatementYesInd",
+            "kind": "element",
+            "name": "ProvidedRqrStatementYesInd",
+            "key": "ProvidedRqrStatementYesInd",
+            "label": "An indicator which indicates that the required statement was provided",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/ProvidedRqrStatementNoInd",
+            "kind": "element",
+            "name": "ProvidedRqrStatementNoInd",
+            "key": "ProvidedRqrStatementNoInd",
+            "label": "An indicator which indicates that the required statement was not provided",
+            "min_occurs": 1,
+            "max_occurs": 1,
+            "type": "DigitBooleanType",
+            "base": "string",
+            "enums": [
+              "0",
+              "1"
+            ],
+            "automatic": false,
+            "sensitive": false
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorJuratSignatureGrp",
+            "kind": "element",
+            "name": "PlanSponsorJuratSignatureGrp",
+            "key": "PlanSponsorJuratSignatureGrp",
+            "label": "Plan sponsor jurat signature group",
+            "min_occurs": 0,
+            "max_occurs": 1,
+            "type": "JuratSignatureGrpType",
+            "children": [
+              {
+                "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorJuratSignatureGrp/JuratSignatureGrpType/sequence[1]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/SignatureIntentInd",
+                    "kind": "element",
+                    "name": "SignatureIntentInd",
+                    "key": "SignatureIntentInd",
+                    "label": "SignatureIntentInd",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DigitBooleanType",
+                    "base": "string",
+                    "enums": [
+                      "0",
+                      "1"
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/JuratSignaturePIN",
+                    "kind": "element",
+                    "name": "JuratSignaturePIN",
+                    "key": "JuratSignaturePIN",
+                    "label": "JuratSignaturePIN",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "JuratSignaturePINType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{5}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/SignatureDt",
+                    "kind": "element",
+                    "name": "SignatureDt",
+                    "key": "SignatureDt",
+                    "label": "SignatureDt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DateNoTimeZoneType",
+                    "base": "date",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[1-9][0-9]{3}\\-([0][1-9]|[1][0-2])\\-([0][1-9]|[1-2][0-9]|[3][0-1])"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/JuratPersonTitleTxt",
+                    "kind": "element",
+                    "name": "JuratPersonTitleTxt",
+                    "key": "JuratPersonTitleTxt",
+                    "label": "JuratPersonTitleTxt",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "JuratPersonTitleType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "35"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/PlanSponsorJuratSignatureGrp/JuratSignatureGrpType/sequence[1]/PersonNm",
+                    "kind": "element",
+                    "name": "PersonNm",
+                    "key": "PersonNm",
+                    "label": "PersonNm",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "PersonNameType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "maxLength",
+                        "value": "35"
+                      },
+                      {
+                        "kind": "pattern",
+                        "value": "([A-Za-z0-9'\\-] ?)*[A-Za-z0-9'\\-]"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          },
+          {
+            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp",
+            "kind": "element",
+            "name": "DefrdVstdBnftPartcpInfoGrp",
+            "key": "DefrdVstdBnftPartcpInfoGrp",
+            "label": "Deferred vested benefits of separated participants group",
+            "min_occurs": 1,
+            "max_occurs": -1,
+            "type": "DefrdVstdBnftPartcpInfoGrpType",
+            "children": [
+              {
+                "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]",
+                "kind": "sequence",
+                "label": "",
+                "min_occurs": 1,
+                "max_occurs": 1,
+                "children": [
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/SequenceNum",
+                    "kind": "element",
+                    "name": "SequenceNum",
+                    "key": "SequenceNum",
+                    "label": "SequenceNum",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "Integer15NNType",
+                    "base": "nonNegativeInteger",
+                    "facets": [
+                      {
+                        "kind": "totalDigits",
+                        "value": "15"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCd",
+                    "kind": "element",
+                    "name": "DefrdVstdBnftEntryCd",
+                    "key": "DefrdVstdBnftEntryCd",
+                    "label": "DefrdVstdBnftEntryCd",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DefrdVstdBnftEntryCdType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                      }
+                    ],
+                    "enums": [
+                      "A",
+                      "B",
+                      "C",
+                      "D"
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/ForeignPersonInd",
+                    "kind": "element",
+                    "name": "ForeignPersonInd",
+                    "key": "ForeignPersonInd",
+                    "label": "ForeignPersonInd",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DigitBooleanType",
+                    "base": "string",
+                    "enums": [
+                      "0",
+                      "1"
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/SSN",
+                    "kind": "element",
+                    "name": "SSN",
+                    "key": "SSN",
+                    "label": "SSN",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "SSNType",
+                    "base": "string",
+                    "facets": [
+                      {
+                        "kind": "pattern",
+                        "value": "[0-9]{9}"
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/PersonName",
+                    "kind": "element",
+                    "name": "PersonName",
+                    "key": "PersonName",
+                    "label": "PersonName",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "OtherCompletePersonNameType",
+                    "children": [
+                      {
+                        "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/PersonFirstNm",
+                            "kind": "element",
+                            "name": "PersonFirstNm",
+                            "key": "PersonFirstNm",
+                            "label": "Person First Name",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "PersonFirstNameType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "maxLength",
+                                "value": "20"
+                              },
+                              {
+                                "kind": "pattern",
+                                "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/PersonMiddleNm",
+                            "kind": "element",
+                            "name": "PersonMiddleNm",
+                            "key": "PersonMiddleNm",
+                            "label": "Person Middle Name",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "PersonMiddleNameType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "maxLength",
+                                "value": "20"
+                              },
+                              {
+                                "kind": "pattern",
+                                "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/PersonLastNm",
+                            "kind": "element",
+                            "name": "PersonLastNm",
+                            "key": "PersonLastNm",
+                            "label": "Person Last Name",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "PersonLastNameType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "maxLength",
+                                "value": "20"
+                              },
+                              {
+                                "kind": "pattern",
+                                "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/PersonName/OtherCompletePersonNameType/sequence[1]/SuffixNm",
+                            "kind": "element",
+                            "name": "SuffixNm",
+                            "key": "SuffixNm",
+                            "label": "Suffix Name",
+                            "min_occurs": 0,
+                            "max_occurs": 1,
+                            "type": "SuffixNameType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "maxLength",
+                                "value": "20"
+                              },
+                              {
+                                "kind": "pattern",
+                                "value": "([A-Za-z\\-] ?)*[A-Za-z\\-]"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": true
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/IncorIncmplInconInfoInd",
+                    "kind": "element",
+                    "name": "IncorIncmplInconInfoInd",
+                    "key": "IncorIncmplInconInfoInd",
+                    "label": "IncorIncmplInconInfoInd",
+                    "min_occurs": 1,
+                    "max_occurs": 1,
+                    "type": "DigitBooleanType",
+                    "base": "string",
+                    "enums": [
+                      "0",
+                      "1"
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdAOrBGrp",
+                    "kind": "element",
+                    "name": "DefrdVstdBnftEntryCdAOrBGrp",
+                    "key": "DefrdVstdBnftEntryCdAOrBGrp",
+                    "label": "DefrdVstdBnftEntryCdAOrBGrp",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "DefrdVstdBnftEntryCdAOrBGrpType",
+                    "children": [
+                      {
+                        "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdAOrBGrp/DefrdVstdBnftEntryCdAOrBGrpType/sequence[0]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdAOrBGrp/DefrdVstdBnftEntryCdAOrBGrpType/sequence[0]/AnnuityTypeCd",
+                            "kind": "element",
+                            "name": "AnnuityTypeCd",
+                            "key": "AnnuityTypeCd",
+                            "label": "AnnuityTypeCd",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "AnnuityTypeCdType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "pattern",
+                                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                              }
+                            ],
+                            "enums": [
+                              "A",
+                              "B",
+                              "C",
+                              "D",
+                              "E",
+                              "F",
+                              "G",
+                              "M"
+                            ],
+                            "automatic": false,
+                            "sensitive": false
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdAOrBGrp/DefrdVstdBnftEntryCdAOrBGrpType/sequence[0]/PaymentFrequencyCd",
+                            "kind": "element",
+                            "name": "PaymentFrequencyCd",
+                            "key": "PaymentFrequencyCd",
+                            "label": "PaymentFrequencyCd",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "PaymentFrequencyCdType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "pattern",
+                                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                              }
+                            ],
+                            "enums": [
+                              "A",
+                              "B",
+                              "C",
+                              "D",
+                              "E",
+                              "M"
+                            ],
+                            "automatic": false,
+                            "sensitive": false
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdAOrBGrp/DefrdVstdBnftEntryCdAOrBGrpType/sequence[0]/PeriodicPaymentAmt",
+                            "kind": "element",
+                            "name": "PeriodicPaymentAmt",
+                            "key": "PeriodicPaymentAmt",
+                            "label": "PeriodicPaymentAmt",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "USDecimalAmountNNType",
+                            "base": "decimal",
+                            "facets": [
+                              {
+                                "kind": "fractionDigits",
+                                "value": "2"
+                              },
+                              {
+                                "kind": "minInclusive",
+                                "value": "0.00"
+                              },
+                              {
+                                "kind": "totalDigits",
+                                "value": "25"
+                              },
+                              {
+                                "kind": "totalDigits",
+                                "value": "17"
+                              },
+                              {
+                                "kind": "maxInclusive",
+                                "value": "999999999999999.99"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": false
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdAOrBGrp/DefrdVstdBnftEntryCdAOrBGrpType/sequence[0]/TotalAccountValueAmt",
+                            "kind": "element",
+                            "name": "TotalAccountValueAmt",
+                            "key": "TotalAccountValueAmt",
+                            "label": "TotalAccountValueAmt",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "USDecimalAmountNNType",
+                            "base": "decimal",
+                            "facets": [
+                              {
+                                "kind": "fractionDigits",
+                                "value": "2"
+                              },
+                              {
+                                "kind": "minInclusive",
+                                "value": "0.00"
+                              },
+                              {
+                                "kind": "totalDigits",
+                                "value": "25"
+                              },
+                              {
+                                "kind": "totalDigits",
+                                "value": "17"
+                              },
+                              {
+                                "kind": "maxInclusive",
+                                "value": "999999999999999.99"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  },
+                  {
+                    "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdCGrp",
+                    "kind": "element",
+                    "name": "DefrdVstdBnftEntryCdCGrp",
+                    "key": "DefrdVstdBnftEntryCdCGrp",
+                    "label": "DefrdVstdBnftEntryCdCGrp",
+                    "min_occurs": 0,
+                    "max_occurs": 1,
+                    "type": "DefrdVstdBnftEntryCdCGrpType",
+                    "children": [
+                      {
+                        "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdCGrp/DefrdVstdBnftEntryCdCGrpType/sequence[0]",
+                        "kind": "sequence",
+                        "label": "",
+                        "min_occurs": 1,
+                        "max_occurs": 1,
+                        "children": [
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdCGrp/DefrdVstdBnftEntryCdCGrpType/sequence[0]/PreviousSponsorEIN",
+                            "kind": "element",
+                            "name": "PreviousSponsorEIN",
+                            "key": "PreviousSponsorEIN",
+                            "label": "Previous Sponsor EIN",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "type": "EINType",
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "pattern",
+                                "value": "[0-9]{9}"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": true
+                          },
+                          {
+                            "id": "record/Form8955SSADetailType/sequence[1]/DefrdVstdBnftPartcpInfoGrp/DefrdVstdBnftPartcpInfoGrpType/sequence[0]/DefrdVstdBnftEntryCdCGrp/DefrdVstdBnftEntryCdCGrpType/sequence[0]/PreviousPlanNumTxt",
+                            "kind": "element",
+                            "name": "PreviousPlanNumTxt",
+                            "key": "PreviousPlanNumTxt",
+                            "label": "Previous Plan Num",
+                            "min_occurs": 1,
+                            "max_occurs": 1,
+                            "base": "string",
+                            "facets": [
+                              {
+                                "kind": "pattern",
+                                "value": "([!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü] ?)*[!-~£§ÁÉÍÑÓ×ÚÜáéíñóúü]"
+                              },
+                              {
+                                "kind": "maxLength",
+                                "value": "3"
+                              },
+                              {
+                                "kind": "pattern",
+                                "value": "([1-9][0-9]{2})|([0-9][1-9][0-9])|([0-9]{2}[1-9])"
+                              }
+                            ],
+                            "automatic": false,
+                            "sensitive": false
+                          }
+                        ],
+                        "automatic": false,
+                        "sensitive": false
+                      }
+                    ],
+                    "automatic": false,
+                    "sensitive": false
+                  }
+                ],
+                "automatic": false,
+                "sensitive": false
+              }
+            ],
+            "automatic": false,
+            "sensitive": true
+          }
+        ],
+        "automatic": false,
+        "sensitive": false
+      }
+    ],
+    "automatic": false,
+    "sensitive": false
+  },
+  "max_records": 5000
+}

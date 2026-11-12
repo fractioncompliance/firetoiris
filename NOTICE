@@ -1,0 +1,18 @@
+FIREtoIRIS
+Copyright 2026 FIREtoIRIS contributors.
+
+FIREtoIRIS is licensed under the Apache License, Version 2.0.
+TaxComposer is the default filing-service integration. Its hosted backend,
+credentials, XML construction and transmission implementation are not included
+in this repository and are not licensed by this distribution.
+
+The contract snapshots describe the client-facing TaxComposer form-input API.
+They contain field definitions, not IRS XSD packages or TaxComposer server code.
+The sample inputs are fictional and must not be submitted as real returns.
+
+The Apache license does not grant trademark rights. Modified distributions must
+not imply that TaxComposer operates or endorses their filing service.
+
+Windows support uses golang.org/x/sys under its BSD license. Compiled Go
+programs include the Go runtime and standard library under the Go BSD license.
+Copies are included under third_party/ and must accompany binary distributions.

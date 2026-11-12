@@ -1,0 +1,62 @@
+{
+  "tax_year": 2026,
+  "form": "1099B",
+  "header": {
+    "CFSFElectionInd": "0",
+    "ContactPersonInformationGrp": {
+      "ContactEmailAddressTxt": "synthetic@example.invalid",
+      "ContactPersonNm": "SYNTHETIC CONTACT",
+      "ContactPhoneNum": "2065550100"
+    },
+    "IssuerDetail": {
+      "BusinessName": {
+        "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+      },
+      "ForeignEntityInd": "0",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "PhoneNum": "2065550100",
+      "TIN": "000123456",
+      "TINSubmittedTypeCd": "BUSINESS_TIN"
+    }
+  },
+  "records": [
+    {
+      "BasisReportedInd": "0",
+      "CollectiblesInd": "0",
+      "FATCAFilingRequirementInd": "0",
+      "GrossProceedsInd": "0",
+      "LongTermGainLossInd": "0",
+      "LossNotAllowedInd": "0",
+      "NetProceedsInd": "0",
+      "NoncoveredSecurityInd": "0",
+      "OrdinaryInd": "0",
+      "PropertyDesc": "SYNTHETIC SECURITY",
+      "QOFInd": "0",
+      "RecipientAccountNum": "SYNTHETIC-1",
+      "RecipientDetail": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        },
+        "TIN": "000123456",
+        "TINSubmittedTypeCd": "BUSINESS_TIN"
+      },
+      "SecondTINNoticeInd": "0",
+      "ShortTermGainLossInd": "0"
+    }
+  ]
+}

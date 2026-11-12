@@ -1,0 +1,101 @@
+{
+  "tax_year": 2025,
+  "form": "1042S",
+  "header": {
+    "ChapterTypeCd": "3",
+    "ContactPersonInformationGrp": {
+      "ContactEmailAddressTxt": "synthetic@example.invalid",
+      "ContactPersonNm": "SYNTHETIC CONTACT",
+      "ContactPhoneNum": "2065550100"
+    },
+    "FinalReturnInd": "0",
+    "Form1042TIssuerDetail": {
+      "BusinessName": {
+        "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+      },
+      "Chapter3StatusCd": "15",
+      "Chapter4StatusCd": "02",
+      "CountryCd": "US",
+      "EIN": "000123456",
+      "ForeignEntityInd": "0",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "TINSubmittedTypeCd": "BUSINESS_TIN"
+    },
+    "ProRataBasisInd": "0",
+    "QIOrWPOrWTRevisingReportingInd": "0",
+    "SubsqYrWithholdingPrtshpIntInd": "0"
+  },
+  "records": [
+    {
+      "Chapter3Grp": {
+        "ExemptionCd": "02",
+        "TaxRt": "0.0000"
+      },
+      "Chapter4Grp": {
+        "ExemptionCd": "15",
+        "TaxRt": "0.0000"
+      },
+      "ChapterTypeCd": "3",
+      "FederalIncomeTaxWithheldAmt": "0",
+      "Form1042SRecipientDetail": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "Chapter3StatusCd": "15",
+        "Chapter4StatusCd": "22",
+        "CountryCd": "US",
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        },
+        "TIN": "000123456",
+        "TINSubmittedTypeCd": "BUSINESS_TIN"
+      },
+      "GrossIncomeAmt": "100",
+      "IncomeTypeCd": "01",
+      "IntermediaryOrFlowThruEntGrp": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "Chapter3StatusCd": "15",
+        "Chapter4StatusCd": "02",
+        "CountryCd": "US",
+        "EIN": "000123456",
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        }
+      },
+      "OtherAgentsTaxWithheldAmt": "0",
+      "PayerGrp": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "Chapter3StatusCd": "15",
+        "Chapter4StatusCd": "02",
+        "EIN": "000123456"
+      },
+      "ProRataBasisInd": "0",
+      "QIOrWPOrWTRevisingReportingInd": "0",
+      "RecipientAccountNum": "SYNTHETIC-1",
+      "SubsqYrWithholdingPrtshpIntInd": "0",
+      "TaxNotDepositPerEscrowProcInd": "0",
+      "TotalTaxWithholdingCreditAmt": "0"
+    }
+  ]
+}

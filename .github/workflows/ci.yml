@@ -1,0 +1,58 @@
+name: FIREtoIRIS platforms
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firetoiris-platforms-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  native:
+    name: ${{ matrix.target }}
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            target: linux-amd64
+          - runner: ubuntu-24.04-arm
+            target: linux-arm64
+          - runner: windows-2025
+            target: windows-amd64
+          - runner: windows-11-arm
+            target: windows-arm64
+          - runner: macos-15
+            target: macos-arm64
+          - runner: macos-15-intel
+            target: macos-amd64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
+        with:
+          go-version: '1.26.4'
+      - name: Audit public source
+        run: python scripts/audit_public.py
+      - name: Native file, lock, migration and CLI tests
+        run: go test -timeout 5m ./pkg/firetoiris ./cmd/firetoiris
+      - name: Static checks
+        run: go vet ./pkg/firetoiris ./cmd/firetoiris
+      - name: Package verified executable
+        run: python scripts/package.py --target ${{ matrix.target }} --smoke
+      - name: Upload build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: FIREtoIRIS-${{ matrix.target }}
+          path: dist/firetoiris/*
+          retention-days: 14
+          if-no-files-found: error

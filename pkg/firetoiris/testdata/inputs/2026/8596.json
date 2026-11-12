@@ -1,0 +1,55 @@
+{
+  "tax_year": 2026,
+  "form": "8596",
+  "header": {
+    "CFSFElectionInd": "0",
+    "ContactPersonInformationGrp": {
+      "ContactEmailAddressTxt": "synthetic@example.invalid",
+      "ContactPersonNm": "SYNTHETIC CONTACT",
+      "ContactPhoneNum": "2065550100"
+    },
+    "IssuerDetail": {
+      "BusinessName": {
+        "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+      },
+      "ForeignEntityInd": "0",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "PhoneNum": "2065550100",
+      "TIN": "000123456",
+      "TINSubmittedTypeCd": "BUSINESS_TIN"
+    }
+  },
+  "records": [
+    {
+      "ContractActionDt": "2026-01-01",
+      "ContractNumTxt": "SYNTHETIC",
+      "ContractOfficeNumTxt": "00001",
+      "ContractorGrp": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        },
+        "TIN": "000123456",
+        "TINSubmittedTypeCd": "BUSINESS_TIN"
+      },
+      "ExpectedContractCompletionDt": "2026-01-01",
+      "GovernmentAgencyTypeCd": "SYNTHETIC",
+      "QuarterEndingDt": "2026-01-01",
+      "TotalContractObligatedAmt": "0.00"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "tax_year": 2026,
+  "form": "1099Q",
+  "header": {
+    "CFSFElectionInd": "0",
+    "ContactPersonInformationGrp": {
+      "ContactEmailAddressTxt": "synthetic@example.invalid",
+      "ContactPersonNm": "SYNTHETIC CONTACT",
+      "ContactPhoneNum": "2065550100"
+    },
+    "IssuerDetail": {
+      "BusinessName": {
+        "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+      },
+      "ForeignEntityInd": "0",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "PhoneNum": "2065550100",
+      "TIN": "000123456",
+      "TINSubmittedTypeCd": "BUSINESS_TIN"
+    }
+  },
+  "records": [
+    {
+      "DistriFromCoverdellESAInd": "0",
+      "DistriFromPrivateQTPInd": "1",
+      "DistriFromStateQTPInd": "0",
+      "GrossDistributionAmt": "100.00",
+      "NotDesignatedBeneficiaryInd": "0",
+      "QTPToRothIRATransferInd": "0",
+      "RecipientAccountNum": "SYNTHETIC-1",
+      "RecipientDetail": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        },
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        },
+        "TIN": "000123456",
+        "TINSubmittedTypeCd": "BUSINESS_TIN"
+      },
+      "TrusteeToTrusteeTransferInd": "0"
+    }
+  ]
+}

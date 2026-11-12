@@ -1,0 +1,10 @@
+/bin/
+/dist/
+/work/
+.env
+.env.*
+*.pem
+*.key
+*-state.json
+*-state.json.lock
+reviewed.json

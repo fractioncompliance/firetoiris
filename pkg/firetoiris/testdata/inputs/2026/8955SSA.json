@@ -1,0 +1,77 @@
+{
+  "tax_year": 2026,
+  "form": "8955SSA",
+  "header": {
+    "PlanAdminJuratSignatureGrp": {
+      "JuratPersonTitleTxt": "OFFICER",
+      "JuratSignaturePIN": "12345",
+      "PersonNm": "SYNTHETIC CONTACT",
+      "SignatureDt": "2027-01-01",
+      "SignatureIntentInd": "1"
+    },
+    "PlanAdministratorInfoGrp": {
+      "ContactPersonPhoneNum": "2065550100",
+      "EIN": "000123456",
+      "MailingAddressGrp": {
+        "USAddress": {
+          "AddressLine1Txt": "123 TEST ST",
+          "CityNm": "SEATTLE",
+          "StateAbbreviationCd": "WA",
+          "ZIPCd": "98101"
+        }
+      },
+      "PlanAdministratorsName": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "AdministratorSameAsSponsorInd": "1",
+      "AutomaticExtensionInd": "0",
+      "ContinuationInd": "0",
+      "DefrdVstdBnftPartcpInfoGrp": [
+        {
+          "DefrdVstdBnftEntryCd": "D",
+          "ForeignPersonInd": "0",
+          "IncorIncmplInconInfoInd": "0",
+          "PersonName": {
+            "PersonFirstNm": "TEST",
+            "PersonLastNm": "RECIPIENT"
+          },
+          "SSN": "000654321",
+          "SequenceNum": "0"
+        }
+      ],
+      "Form5558Ind": "0",
+      "PlanNameTxt": "SYNTHETIC",
+      "PlanNumTxt": "100",
+      "PlanSponsorInfoGrp": {
+        "ContactPersonPhoneNum": "2065550100",
+        "EIN": "000123456",
+        "MailingAddressGrp": {
+          "USAddress": {
+            "AddressLine1Txt": "123 TEST ST",
+            "CityNm": "SEATTLE",
+            "StateAbbreviationCd": "WA",
+            "ZIPCd": "98101"
+          }
+        },
+        "PlanSponsorBusinessName": {
+          "BusinessName": {
+            "BusinessNameLine1Txt": "SYNTHETIC PAYER"
+          }
+        }
+      },
+      "PlanYearBeginDt": "2026-01-01",
+      "PlanYearEndDt": "2026-01-01",
+      "ProvidedRqrStatementNoInd": "0",
+      "ProvidedRqrStatementYesInd": "0",
+      "SpecialExtensionInd": "0",
+      "TotalParticipantCnt": "0",
+      "VoluntaryFilerInd": "0"
+    }
+  ]
+}
